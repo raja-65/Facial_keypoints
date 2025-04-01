@@ -21,9 +21,8 @@ This project trains a CNN model to detect key facial landmarks such as eyes, eye
     |-- test.csv              # Test data with images only  
     |-- IdLookupTable.csv      # Mapping for submission  
     |-- SampleSubmission.csv   # Example submission format  
-    |-- model.py               # CNN Model definition  
-    |-- train.py               # Training script  
-    |-- predict.py             # Prediction script  
+    |-- facial_keypoints.py    # CNN Model definition  & training
+    |-- onlytesting.py         # Testing & prediction script  
     |-- submission.csv         # Final submission file  
     |-- README.md              # Project documentation  
 ```
@@ -34,7 +33,7 @@ This project trains a CNN model to detect key facial landmarks such as eyes, eye
 Ensure you have Python **3.7+** installed. Then, install the required dependencies:
 
 ```bash
-pip install -r requirements.txt
+remember to pip install all requirements
 ```
   
 If using **GPU**, install PyTorch with CUDA support:
@@ -45,7 +44,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ---
 
 ## 📊 Dataset  
-- The dataset consists of **96x96 grayscale facial images**.  
+- The dataset consists of **96x96 grayscale facial images**. on kaggle  has the DB 
 - Each image has **up to 30 keypoints (x, y coordinates)**.  
 - Some keypoints may be missing (handled using a mask).  
 - The dataset is provided as **CSV files**, where images are stored as pixel intensity values.  
@@ -71,9 +70,10 @@ The model is a **CNN-based regression network** with the following structure:
 ---
 
 ## 🏋️‍♂️ Training the Model  
+## specially trained on CPU
 Run the training script:  
 ```bash
-python train.py
+python facial_keypoints.py
 ```
 The model will be saved as:  
 ```bash
@@ -88,9 +88,9 @@ facial_keypoints_model.pth
 ---
 
 ## 🔎 Making Predictions  
-Run the prediction script:  
+Run the prediction and testing script:  
 ```bash
-python predict.py
+python onlytesting.py
 ```
 This will generate a `submission.csv` file.
 
@@ -149,9 +149,8 @@ This project is **MIT Licensed**. You are free to use, modify, and distribute th
 
 ## 🙌 Acknowledgments  
 - Kaggle's **Facial Keypoints Detection** competition  
-- PyTorch documentation for deep learning models  
-- OpenAI for AI-powered guidance  
-
+- PyTorch documentation for deep learning models
+- 
 ---
 
 🚀 **Happy Coding!** 🚀
