@@ -1,7 +1,18 @@
 # Facial Keypoints Detection with CNN  
-This repository contains a **Facial Keypoints Detection** pipeline using a **Convolutional Neural Network (CNN)** implemented in PyTorch. The project processes facial images, detects 30 facial keypoints, and prepares a submission for Kaggle’s **Facial Keypoints Detection** challenge.  
+This repository contains a **Facial Keypoints Detection** pipeline using a **Convolutional Neural Network (CNN)** implemented in PyTorch. The project processes facial images, detects 30 facial keypoints, and prepares a submission for Kaggle’s **Facial Keypoints Detection** challenge.
 
 ---
+
+## 📂 Dataset Setup  
+Before running the scripts, **download and extract** the dataset from Kaggle:
+
+🔗 **Kaggle Dataset**: [Facial Keypoints Detection](https://www.kaggle.com/c/facial-keypoints-detection/data)
+
+### 🔽 **Steps to Download & Extract**
+1. Go to the [Kaggle dataset link](https://www.kaggle.com/c/facial-keypoints-detection/data).
+2. Download **ALL ZIP files** (including subfolders).
+3. Extract all contents into the **root directory** of this project.
+
 
 ## 🚀 Project Overview  
 This project trains a CNN model to detect key facial landmarks such as eyes, eyebrows, nose, and mouth positions from grayscale images of faces.  
